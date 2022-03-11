@@ -6,15 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
   <title>Snake 2022</title>
-  <script src="snakeGame.js" defer type="module"></script> <!-- Import the modules from snakeGame.js-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body> <!--Just added a simple game-box for now.-->
-  <div id = "game-box" ></div>
-  <div id = "button-box">
-    <button class = "info-button">Info</button>
-    <button class = "start-button"> Start</button>
-    <button class = "highScore-button">Scores </button>
+  <div id="background-box">
+    <div id = "game-box" ></div>
   </div>
+  <div id = "button-box">
+    <button id = "info-button">Info</button>
+    <button id = "start-button"> Start</button>
+    <button id = "highScore-button">Scores</button>
+  </div>
+  <div id = "foot-box"></div>
+  <script src="snakeGame.js" defer type="module"></script> <!-- Import the modules from snakeGame.js-->  
 </body>
 <footer>
 </footer>
