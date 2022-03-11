@@ -2,7 +2,7 @@
 import { getDirection } from "./inputs.js"
 
 export let snakeMovement = 5
-const body = [{x:11,y:11}]
+let body = [{x:21,y:21}]
 let newPiece = 0
 let score = 0
 
@@ -43,8 +43,8 @@ export function snakeEat(position,{ignoreHead = false} = {}){  // check if snake
 
 function samePosition(value1,value2) { // check if position is same
     if (value1.x === value2.x && value1.y === value2.y){
-        snakeSpeedIncrease()
         score +=1
+        snakeSpeedIncrease()
     }
     return value1.x === value2.x && value1.y === value2.y
 }
@@ -66,9 +66,17 @@ export function intersection(){ // checks if the snake head ate any part of itse
 }
 
 function snakeSpeedIncrease(){
-    snakeMovement+=1
+    if(score % 3 === 0){
+        snakeMovement+=1
+    }
 }
 
 export function getScore(){
     return score
+}
+
+export function clearSnake(){
+    body = [{x:21,y:21}]
+    score = 0
+    snakeMovement = 5
 }

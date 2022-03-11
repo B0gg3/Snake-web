@@ -3,20 +3,17 @@ import {snakeEat, addToSnake} from './snakePython.js' // import necessary functi
 let apple = randomizeApplePosition()
 const SNAKE_GROWTH = 1
 
-
 export function updateApple(){ // function to update apple position
     if(snakeEat(apple)){ // if the snake eats the apple add a piece to the snake.
         addToSnake(SNAKE_GROWTH)
         apple = randomizeApplePosition() // randomize the apple position
     }
-
 }
 
 export function drawApple(gameBox){ // simple function to draw "put the apple" on the grid.
      const elementApple = document.createElement('div')
      elementApple.style.gridRowStart = apple.y
-     elementApple.style.gridColumnStart = apple.x
-     
+     elementApple.style.gridColumnStart = apple.x   
      elementApple.classList.add('apple')
      gameBox.appendChild(elementApple)
     
@@ -31,7 +28,6 @@ function randomizeApplePosition(){ // randomize apple position
         }else if(newApplePosition.y < 1){
             newApplePosition.y = 1
         }
-
     }
 
     return newApplePosition // return the cordinates for the apple
