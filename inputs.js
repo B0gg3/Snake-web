@@ -1,7 +1,7 @@
 let direction = {x: 0, y: -1} // place holder for the direction
 let lastestInput = {x: 0, y: 0} // place holder for the previous direction
 
-// This is a simple function to get input for the game
+// This is a simple function to get input for the game through arrow keys
 window.addEventListener("keydown", keyboardInput =>{
     switch(keyboardInput.key){
         case 'ArrowUp':
@@ -54,6 +54,6 @@ rightBtn.addEventListener('click', event => {
 });
 
 export function getDirection(){ // function to return the new direction
-    lastestInput = direction // keeps the direction so we can make the checks in the eventlistener
+    lastestInput = direction // keeps the direction so we can make the checks.
     return direction // returns the direction
 }

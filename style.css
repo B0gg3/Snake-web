@@ -126,3 +126,8 @@ body {
     border: .25vmin solid black;
 
   }
+
+  #table{
+    margin-left: auto;
+    margin-right: auto;
+  }
